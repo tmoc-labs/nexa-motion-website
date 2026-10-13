@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Direction 3 Performance</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=Onest:wght@500;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#F4F5F2}a:hover{color:#C9CDD0}
+</style>
+</helmet>
+<div style="background: #141516; color: #F4F5F2; font-family: 'Schibsted Grotesk', system-ui, sans-serif; display: flex; flex-direction: column">
+
+<div style="position: relative; height: 900px; overflow: hidden; background: #1C1F22">
+<img src="./assets/04d7b9da3565bd13d33b324d504decc1.jpg" alt="Golfer hitting out of a bunker, sand in the air" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 35%; filter: contrast(1.15) saturate(0.6) brightness(0.62)">
+<div style="position: absolute; inset: 0; background: linear-gradient(rgba(20,21,22,0.55), rgba(20,21,22,0.15) 35%, rgba(20,21,22,0.75))"></div>
+<div style="position: absolute; left: 0; right: 0; top: 0; z-index: 2; box-sizing: border-box; padding: 0 48px; height: 80px; display: flex; align-items: center; justify-content: space-between">
+<div style="font-family: 'Onest', sans-serif; font-size: 18px; letter-spacing: -0.03em"><span style="font-weight: 700">Nexa</span><span style="font-weight: 500; margin-left: 0.22em">Motion</span></div>
+<div style="display: flex; align-items: center; gap: 28px; font-size: 14px; font-weight: 500"><a href="#product" style="text-decoration: none">Product</a><a href="#engineering" style="text-decoration: none">Engineering</a><a href="#about" style="text-decoration: none">About</a><a href="#waitlist" style="text-decoration: none; display: flex; align-items: center; height: 40px; padding: 0 18px; border-radius: 999px; background: #F4F5F2; color: #141516; font-weight: 600; font-size: 14px">Join the waitlist</a></div>
+</div>
+<div style="position: absolute; left: 12px; top: 84px; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #F4F5F2; opacity: 0.6">D3 · 01 HERO · REFERENCE, UNSPLASH, NOT FOR FINAL · FINAL: GOLFER MID-STRIDE, LOW ANGLE, ROAM BEHIND, SAME HARD LIGHT &amp; DARK GRADE</div>
+<div style="position: absolute; left: 48px; right: 48px; bottom: 56px; display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 48px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 760px">
+<div style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #C9CDD0">THE FOLLOW CADDY · 2027</div>
+<h1 style="margin: 0; font-size: 92px; font-weight: 600; line-height: 0.96; letter-spacing: -0.04em">Walk 18.<br>Carry nothing.</h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.5; max-width: 480px; color: #C9CDD0">Follows you for the full round, folds in one motion, and weighs less than the bag.</p>
+<a href="#waitlist" style="text-decoration: none; display: inline-flex; align-items: center; height: 52px; padding: 0 26px; border-radius: 999px; background: #F4F5F2; color: #141516; font-weight: 600; font-size: 16px; align-self: flex-start">Join the waitlist</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; border-top: 1px solid rgba(244,245,242,0.3); padding-top: 16px">
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Geist Mono', monospace; font-size: 28px; font-weight: 500; letter-spacing: -0.02em">18</div><div style="font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #9BA0A4">HOLES</div></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Geist Mono', monospace; font-size: 28px; font-weight: 500; letter-spacing: -0.02em">6.1</div><div style="font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #9BA0A4">KM WALKED</div></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Geist Mono', monospace; font-size: 28px; font-weight: 500; letter-spacing: -0.02em">0.0</div><div style="font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #9BA0A4">KG CARRIED</div></div>
+</div>
+</div>
+</div>
+
+<div id="product" style="position: relative; background: #F4F5F2; color: #141516; box-sizing: border-box; padding: 104px 48px; display: grid; grid-template-columns: minmax(0, 1fr) 560px; gap: 56px; align-items: center">
+<div style="position: absolute; left: 12px; top: 8px; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #B9B7AF">D3 · 02 REVEAL · CHALK BAND, INVERSE OF THE PAGE · RENDER PLACEHOLDER</div>
+<div style="height: 620px; border-radius: 12px; overflow: hidden; background: #E3E4E0; display: flex; align-items: center; justify-content: center"><img src="./assets/bd576bcf07f6e3cba8de9d0485b40f0e.jpg" alt="Concept render of the caddy" style="width: 100%; height: 100%; object-fit: cover; filter: contrast(1.05)"></div>
+<div style="display: flex; flex-direction: column; gap: 22px">
+<div style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #5F6368">INTRODUCING</div>
+<div style="font-size: 88px; font-weight: 600; letter-spacing: -0.04em; line-height: 0.95">Roam.</div>
+<p style="margin: 0; font-size: 20px; line-height: 1.5; color: #4A4E52; max-width: 460px">For the golfer who would rather walk 18 than ride 18. It follows, it folds, and it carries so you don't.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; max-width: 460px">
+<div style="border-top: 2px solid #141516; padding-top: 10px"><div style="font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #5F6368">WEIGHT</div><div style="font-family: 'Geist Mono', monospace; font-size: 26px; font-weight: 500; letter-spacing: -0.02em">[—] kg</div></div>
+<div style="border-top: 2px solid #141516; padding-top: 10px"><div style="font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #5F6368">RANGE</div><div style="font-family: 'Geist Mono', monospace; font-size: 26px; font-weight: 500; letter-spacing: -0.02em">[—] holes</div></div>
+<div style="border-top: 2px solid #141516; padding-top: 10px"><div style="font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #5F6368">FOLLOW DISTANCE</div><div style="font-family: 'Geist Mono', monospace; font-size: 26px; font-weight: 500; letter-spacing: -0.02em">2.1 m</div></div>
+<div style="border-top: 2px solid #141516; padding-top: 10px"><div style="font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #5F6368">MAX SLOPE</div><div style="font-family: 'Geist Mono', monospace; font-size: 26px; font-weight: 500; letter-spacing: -0.02em">[—]°</div></div>
+</div>
+</div>
+</div>
+
+<div style="position: relative; box-sizing: border-box; padding: 112px 48px 104px; display: flex; flex-direction: column; gap: 48px">
+<div style="position: absolute; left: 12px; top: 8px; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #5F6368">D3 · 03 FEATURES · ONE ROW, DATA CHIPS DO THE WORK</div>
+<div style="display: flex; justify-content: space-between; align-items: end; gap: 48px">
+<h2 style="margin: 0; font-size: 56px; font-weight: 600; line-height: 1; letter-spacing: -0.035em; max-width: 760px">Follows you. Climbs anything. Weighs almost nothing.</h2>
+<div style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #9BA0A4; white-space: nowrap">01 — 03</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 16px; background: #1C1F22; border-radius: 14px; overflow: hidden">
+<div style="position: relative; height: 340px; background: #24282C"><img src="./assets/c9b43a1aa89c77e44a36575880c8a6fc.jpg" alt="Prototype trolley following on a path" style="width: 100%; height: 100%; object-fit: cover; filter: contrast(1.1) saturate(0.85)"><div style="position: absolute; left: 14px; bottom: 14px; font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: #F4F5F2; background: rgba(20,21,22,0.8); padding: 5px 8px; border-radius: 4px">FOLLOWING · 2.1 M</div><div style="position: absolute; left: 12px; top: 10px; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #F4F5F2; opacity: 0.6">PLACEHOLDER</div></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 8px 22px 26px">
+<div style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #9BA0A4">01 · FOLLOW</div>
+<h3 style="margin: 0; font-size: 26px; font-weight: 600; line-height: 1.1; letter-spacing: -0.025em">It follows you.</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9CDD0">Set it to follow and walk. Roam holds two metres back, steers around whatever is in the way, and stops when you stop.</p>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px; background: #1C1F22; border-radius: 14px; overflow: hidden">
+<div style="position: relative; height: 340px; background: #24282C"><img src="./assets/825014b9912d70cbca8d4e1f1e226fba.jpg" alt="Prototype trolley folded" style="width: 100%; height: 100%; object-fit: cover; filter: contrast(1.1) saturate(0.85)"><div style="position: absolute; left: 14px; bottom: 14px; font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: #F4F5F2; background: rgba(20,21,22,0.8); padding: 5px 8px; border-radius: 4px">FOLDED · [L × W × H] MM</div><div style="position: absolute; left: 12px; top: 10px; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #F4F5F2; opacity: 0.6">PLACEHOLDER</div></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 8px 22px 26px">
+<div style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #9BA0A4">02 · FOLD</div>
+<h3 style="margin: 0; font-size: 26px; font-weight: 600; line-height: 1.1; letter-spacing: -0.025em">One motion, folded.</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9CDD0">A precision bevel-gear set collapses the frame in a single movement. No latches, no sequence. Two seconds, and it's in the boot.</p>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px; background: #1C1F22; border-radius: 14px; overflow: hidden">
+<div style="position: relative; height: 340px; background: #24282C"><img src="./assets/1ef1af2d8a043afccf5739cb24066392.jpg" alt="Prototype trolley with a bag on grass" style="width: 100%; height: 100%; object-fit: cover; filter: contrast(1.1) saturate(0.85)"><div style="position: absolute; left: 14px; bottom: 14px; font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: #F4F5F2; background: rgba(20,21,22,0.8); padding: 5px 8px; border-radius: 4px">[WEIGHT] KG · [RANGE] HOLES</div><div style="position: absolute; left: 12px; top: 10px; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #F4F5F2; opacity: 0.6">PLACEHOLDER</div></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 8px 22px 26px">
+<div style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #9BA0A4">03 · LIGHT</div>
+<h3 style="margin: 0; font-size: 26px; font-weight: 600; line-height: 1.1; letter-spacing: -0.025em">Lighter than it looks.</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9CDD0">The motor and its controller sit inside each rear hub. No gearbox, no drivetrain, no dead weight.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="app" style="position: relative; background: #0F1011; color: #F4F5F2; box-sizing: border-box; padding: 104px 48px; display: grid; grid-template-columns: minmax(0, 1fr) 340px 320px; gap: 56px; align-items: center">
+<div style="position: absolute; left: 12px; top: 8px; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #5F6368">D3 · 04 APP · DARKER BAND · SAME MOCKUP AS DIRECTION 1</div>
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 460px">
+<div style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #9BA0A4">THE APP</div>
+<h2 style="margin: 0; font-size: 56px; font-weight: 600; line-height: 1; letter-spacing: -0.035em">Every course, in your pocket.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #C9CDD0">Maps for 40,000 courses, live follow status, full remote control, and your range in holes before you've left the car park.</p>
+<div style="display: flex; gap: 10px"><div style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: #C9CDD0; border: 1px solid #2A2E32; padding: 6px 10px; border-radius: 4px">iOS</div><div style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: #C9CDD0; border: 1px solid #2A2E32; padding: 6px 10px; border-radius: 4px">ANDROID</div><div style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: #C9CDD0; border: 1px solid #2A2E32; padding: 6px 10px; border-radius: 4px">2027</div></div>
+</div>
+<div style="width: 320px; height: 660px; border-radius: 40px; background: #16181A; box-sizing: border-box; padding: 10px; justify-self: center; box-shadow: 0 40px 80px rgba(0,0,0,0.6)">
+<div style="width: 100%; height: 100%; border-radius: 32px; overflow: hidden; background: #F7F6F2; position: relative; display: flex; flex-direction: column; font-family: 'Schibsted Grotesk', sans-serif">
+<div style="position: relative; flex-grow: 1; background: #DFE6D4; overflow: hidden">
+<svg width="100%" height="100%" viewBox="0 0 300 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<rect width="300" height="420" fill="#DFE6D4"></rect>
+<path d="M-20 420 C 40 330, 60 300, 110 250 S 190 170, 230 90 S 280 20, 330 -10 L 330 -40 L -20 -40 Z" fill="#CBD6BC"></path>
+<path d="M30 420 C 70 350, 90 310, 130 265 S 200 190, 235 115 S 275 45, 320 10" fill="none" stroke="#B9C7A6" stroke-width="54" stroke-linecap="round"></path>
+<path d="M30 420 C 70 350, 90 310, 130 265 S 200 190, 235 115 S 275 45, 320 10" fill="none" stroke="#A9BB94" stroke-width="26" stroke-linecap="round"></path>
+<ellipse cx="236" cy="104" rx="26" ry="18" fill="#9FB58A"></ellipse>
+<ellipse cx="180" cy="200" rx="14" ry="9" fill="#E8DFC4"></ellipse>
+<ellipse cx="96" cy="300" rx="12" ry="8" fill="#E8DFC4"></ellipse>
+<path d="M92 372 C 110 350, 128 335, 146 318 S 178 270, 196 236" fill="none" stroke="#16181A" stroke-width="2" stroke-dasharray="4 5"></path>
+<circle cx="196" cy="236" r="7" fill="#F7F6F2" stroke="#16181A" stroke-width="2"></circle>
+<circle cx="92" cy="372" r="9" fill="#16181A"></circle>
+<circle cx="92" cy="372" r="16" fill="none" stroke="#16181A" stroke-width="1" opacity="0.35"></circle>
+<rect x="80" y="330" width="26" height="12" rx="3" fill="#16181A"></rect>
+<circle cx="84" cy="344" r="3" fill="#16181A"></circle><circle cx="102" cy="344" r="3" fill="#16181A"></circle>
+</svg>
+<div style="position: absolute; left: 16px; top: 18px; display: flex; flex-direction: column; gap: 4px">
+<div style="font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #4A4E52">HOLE 7 · PAR 4</div>
+<div style="font-size: 26px; font-weight: 500; letter-spacing: -0.02em; color: #16181A">412 yd</div>
+</div>
+<div style="position: absolute; right: 16px; top: 18px; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: #F7F6F2; background: rgba(22,24,26,0.8); padding: 5px 8px; border-radius: 4px">FOLLOWING · 2.1 M</div>
+<div style="position: absolute; left: 112px; top: 350px; font-family: 'Geist Mono', monospace; font-size: 8px; letter-spacing: 0.08em; color: #16181A">ROAM</div>
+</div>
+<div style="background: #F7F6F2; box-sizing: border-box; padding: 18px 16px 22px; display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #DDDBD4">
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<div style="display: flex; flex-direction: column; gap: 2px"><div style="font-family: 'Geist Mono', monospace; font-size: 8px; letter-spacing: 0.08em; color: #8E918C">BATTERY</div><div style="font-size: 16px; font-weight: 500; color: #16181A">78%</div></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><div style="font-family: 'Geist Mono', monospace; font-size: 8px; letter-spacing: 0.08em; color: #8E918C">RANGE LEFT</div><div style="font-size: 16px; font-weight: 500; color: #16181A">11 holes</div></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><div style="font-family: 'Geist Mono', monospace; font-size: 8px; letter-spacing: 0.08em; color: #8E918C">WALKED</div><div style="font-size: 16px; font-weight: 500; color: #16181A">3.4 km</div></div>
+</div>
+<div style="display: flex; gap: 8px">
+<button type="button" style="flex-grow: 1; height: 48px; border-radius: 999px; border: 0; background: #16181A; color: #F7F6F2; font-family: inherit; font-weight: 600; font-size: 14px">Pause follow</button>
+<button type="button" aria-label="Fold" style="width: 48px; height: 48px; border-radius: 999px; border: 1px solid #B9B7AF; background: #F7F6F2; color: #16181A; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.06em">FOLD</button>
+</div>
+<div style="display: flex; justify-content: space-between; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: #8E918C"><span>REMOTE</span><span>COURSE</span><span>TROLLEY</span><span>SETTINGS</span></div>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 28px; padding-top: 40px"><div style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid #2A2E32; padding-top: 14px"><div style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #9BA0A4">COURSE MAP</div><div style="font-size: 15px; line-height: 1.5; color: #C9CDD0">Every hole, with distances to the front, middle and back of the green.</div></div><div style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid #2A2E32; padding-top: 14px"><div style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #9BA0A4">LIVE FOLLOW</div><div style="font-size: 15px; line-height: 1.5; color: #C9CDD0">Where Roam is, how far back it sits, and a one-tap pause.</div></div><div style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid #2A2E32; padding-top: 14px"><div style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #9BA0A4">BATTERY &amp; RANGE</div><div style="font-size: 15px; line-height: 1.5; color: #C9CDD0">Holes left, not a percentage you have to translate.</div></div></div>
+</div>
+
+<div id="engineering" style="position: relative; background: #F4F5F2; color: #141516; box-sizing: border-box; padding: 104px 48px; display: grid; grid-template-columns: 6fr 6fr; gap: 56px; align-items: center">
+<div style="position: absolute; left: 12px; top: 8px; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #B9B7AF">D3 · 05 ENGINEERING + ABOUT · CHALK BAND · ONE PHOTO, HIGH CONTRAST · PARENT NOT NAMED</div>
+<div style="position: relative; height: 560px; border-radius: 12px; overflow: hidden; background: #E3E4E0">
+<img src="./assets/a8f0510f7401c759c1c8bbf8c2120f2c.jpg" alt="Team assembling a prototype" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; filter: grayscale(1) contrast(1.15)">
+<div style="position: absolute; left: 14px; top: 12px; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #F4F5F2; background: rgba(20,21,22,0.6); padding: 5px 8px; border-radius: 4px">ASSEMBLY · PROTOTYPE 14</div>
+</div>
+<div id="about" style="display: flex; flex-direction: column; gap: 22px">
+<div style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #5F6368">ENGINEERING</div>
+<h2 style="margin: 0; font-size: 52px; font-weight: 600; line-height: 1; letter-spacing: -0.035em">Built with the precision of luxury automotive engineering.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #4A4E52; max-width: 520px">Nexa Motion comes from a team that has spent decades building components for the world's car makers, to tolerances measured in microns. Roam's hub motors, fold mechanism and battery pack are designed and built in-house, then tested the way automotive parts are tested: to failure, and then again. One product, made properly.</p>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 8px"><div style="border-top: 2px solid #141516; padding-top: 10px; display: flex; flex-direction: column; gap: 6px"><div style="font-family: 'Geist Mono', monospace; font-size: 28px; font-weight: 500; letter-spacing: -0.02em">14</div><div style="font-size: 13px; line-height: 1.45; color: #4A4E52">prototypes since 2025</div></div><div style="border-top: 2px solid #141516; padding-top: 10px; display: flex; flex-direction: column; gap: 6px"><div style="font-family: 'Geist Mono', monospace; font-size: 28px; font-weight: 500; letter-spacing: -0.02em">3</div><div style="font-size: 13px; line-height: 1.45; color: #4A4E52">systems built in-house</div></div><div style="border-top: 2px solid #141516; padding-top: 10px; display: flex; flex-direction: column; gap: 6px"><div style="font-family: 'Geist Mono', monospace; font-size: 28px; font-weight: 500; letter-spacing: -0.02em">2027</div><div style="font-size: 13px; line-height: 1.45; color: #4A4E52">first deliveries</div></div></div>
+</div>
+</div>
+
+<div id="waitlist" style="position: relative; background: #141516; color: #F4F5F2; box-sizing: border-box; padding: 136px 48px; display: grid; grid-template-columns: 2fr 8fr 2fr; overflow: hidden">
+<img src="./assets/33a7615bfb7bab2c5fcdc3239ef566bd.jpg" alt="Fairway and bunkers at first light" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; filter: contrast(1.15) saturate(0.55) brightness(0.6)">
+<div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,21,22,0.5), rgba(20,21,22,0.3) 50%, rgba(20,21,22,0.65))"></div>
+<div style="position: absolute; left: 12px; top: 8px; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #9BA0A4">D3 · 07 WAITLIST · FULL-BLEED COURSE PHOTO, HARD DARK GRADE · EMAIL ONLY</div>
+<div></div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 28px; align-items: center; text-align: center">
+<div style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #9BA0A4">ARRIVING 2027</div>
+<h2 style="margin: 0; font-size: 72px; font-weight: 600; line-height: 0.96; letter-spacing: -0.04em">Be first on the tee.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.55; color: #C9CDD0; max-width: 520px">Leave your email and we'll tell you the moment Roam is ready to order. Nothing else, ever.</p>
+<form style="display: flex; gap: 10px; width: 560px; max-width: 100%" onsubmit="return false">
+<input type="email" placeholder="you@example.com" aria-label="Email address" style="flex-grow: 1; height: 52px; padding: 0 20px; border: 1px solid rgba(244,245,242,0.35); border-radius: 999px; background: rgba(20,21,22,0.45); color: #F4F5F2; font-family: inherit; font-size: 15px; outline: none; backdrop-filter: blur(6px)">
+<button type="submit" style="height: 52px; padding: 0 26px; border: 0; border-radius: 999px; background: #F4F5F2; color: #141516; font-family: inherit; font-weight: 600; font-size: 15px">Join the waitlist</button>
+</form>
+<div style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #C9CDD0">NO SPAM · ONE EMAIL WHEN IT SHIPS · UNSUBSCRIBE ANY TIME</div>
+</div>
+<div></div>
+</div>
+
+<div style="position: relative; background: #0B0C0D; color: #F4F5F2; box-sizing: border-box; padding: 72px 48px 40px; display: flex; flex-direction: column; gap: 56px">
+<div style="position: absolute; left: 12px; top: 8px; font-family: 'Geist Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: #5F6368">D3 · 08 FOOTER · NEAR-BLACK · STACKED WORDMARK</div>
+<div style="display: grid; grid-template-columns: 5fr 7fr; gap: 64px">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<div style="font-family: 'Onest', sans-serif; font-size: 34px; letter-spacing: -0.03em; line-height: 1.0"><div style="font-weight: 700">Nexa</div><div style="font-weight: 500">Motion</div></div>
+<div style="font-size: 14px; line-height: 1.5; color: #9BA0A4; max-width: 300px">The follow caddy. Arriving 2027.</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px"><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #5F6368">PRODUCT</div><a href="#" style="text-decoration: none; color: #C9CDD0; font-size: 14px">Roam</a><a href="#" style="text-decoration: none; color: #C9CDD0; font-size: 14px">The app</a><a href="#" style="text-decoration: none; color: #C9CDD0; font-size: 14px">Engineering</a><a href="#" style="text-decoration: none; color: #C9CDD0; font-size: 14px">Specifications</a></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #5F6368">COMPANY</div><a href="#" style="text-decoration: none; color: #C9CDD0; font-size: 14px">About</a><a href="#" style="text-decoration: none; color: #C9CDD0; font-size: 14px">Press</a><a href="#" style="text-decoration: none; color: #C9CDD0; font-size: 14px">Careers</a><a href="#" style="text-decoration: none; color: #C9CDD0; font-size: 14px">Contact</a></div><div style="display: flex; flex-direction: column; gap: 12px"><div style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: #5F6368">FOLLOW</div><a href="#" style="text-decoration: none; color: #C9CDD0; font-size: 14px">Instagram</a><a href="#" style="text-decoration: none; color: #C9CDD0; font-size: 14px">YouTube</a><a href="#" style="text-decoration: none; color: #C9CDD0; font-size: 14px">LinkedIn</a></div></div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid #2A2E32; font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #5F6368">
+<div>© 2026 NEXA MOTION. ALL RIGHTS RESERVED.</div>
+<div style="display: flex; gap: 24px"><span>PRIVACY</span><span>TERMS</span><span>COOKIES</span></div>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5180}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
